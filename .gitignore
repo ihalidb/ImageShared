@@ -5,3 +5,5 @@
 #Bu bir deneme satırıdır. 
 
 *.swift
+/ImageShared/qweasd.plist
+qweasd.plist
