@@ -43,10 +43,13 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         let storageReferance = storage.reference()
         let mediraFolder = storageReferance.child("media")
         if let data = imageView.image?.jpegData(compressionQuality: 0.5) {
-            let imageReferance = mediraFolder.child("image.jpg")
+            
+            let uuid = UUID().uuidString
+            
+            let imageReferance = mediraFolder.child("\(uuid).jpg")
             imageReferance.putData(data) { (storagemetadata, error) in
                 if error != nil {
-                    print(error?.localizedDescription)
+                    self.hataMesajiGoster(title: "Hata!", message: error?.localizedDescription ?? "Hata aldınız, tekrar deneyiniz!")
                 } else {
                     imageReferance.downloadURL { url, error in
                         if error == nil {
@@ -58,6 +61,14 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             }
         }
         
+    }
+    
+    func hataMesajiGoster(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert
+        )
+        let okButton = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okButton)
+        self.present(alert, animated: true)
     }
     
 }
