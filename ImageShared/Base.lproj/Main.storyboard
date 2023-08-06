@@ -110,14 +110,53 @@
                     <view key="view" contentMode="scaleToFill" id="1VY-uf-5nk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character.duployan" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SIl-WE-ICO">
+                                <rect key="frame" x="24" y="238" width="366" height="331"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="think..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p3L-Bx-RAE">
+                                <rect key="frame" x="24" y="577" width="366" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="SQj-Rl-Hc1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1V-9b-ZpW">
+                                <rect key="frame" x="161" y="625" width="84" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="CYJ-ku-OyE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Upload!"/>
+                                <connections>
+                                    <action selector="uploadButtonTiklandi:" destination="Wfi-sI-OtN" eventType="touchUpInside" id="z5P-FV-TOg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ljd-bO-Mcy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SIl-WE-ICO" firstAttribute="trailing" secondItem="p3L-Bx-RAE" secondAttribute="trailing" id="5iz-Sm-Upg"/>
+                            <constraint firstItem="SIl-WE-ICO" firstAttribute="leading" secondItem="Ljd-bO-Mcy" secondAttribute="leading" constant="24" id="Ic6-Bl-A6F"/>
+                            <constraint firstItem="SIl-WE-ICO" firstAttribute="top" secondItem="Ljd-bO-Mcy" secondAttribute="top" constant="237.5" id="L2V-Vk-x3H"/>
+                            <constraint firstItem="g1V-9b-ZpW" firstAttribute="top" secondItem="p3L-Bx-RAE" secondAttribute="bottom" constant="14" id="LSv-XC-3Cz"/>
+                            <constraint firstItem="Ljd-bO-Mcy" firstAttribute="bottom" secondItem="g1V-9b-ZpW" secondAttribute="bottom" constant="187" id="QKu-Ed-uqk"/>
+                            <constraint firstItem="SIl-WE-ICO" firstAttribute="leading" secondItem="p3L-Bx-RAE" secondAttribute="leading" id="Rac-m6-Emx"/>
+                            <constraint firstItem="g1V-9b-ZpW" firstAttribute="leading" secondItem="Ljd-bO-Mcy" secondAttribute="leading" constant="161" id="UDj-Vv-1CI"/>
+                            <constraint firstItem="p3L-Bx-RAE" firstAttribute="top" secondItem="SIl-WE-ICO" secondAttribute="bottom" constant="7.5" id="iQs-hl-fMv"/>
+                            <constraint firstItem="SIl-WE-ICO" firstAttribute="centerX" secondItem="1VY-uf-5nk" secondAttribute="centerX" id="q7N-iZ-wx9"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="character.duployan" catalog="system" id="IBg-AU-tFX"/>
+                    <connections>
+                        <outlet property="imageView" destination="SIl-WE-ICO" id="yzo-MD-Khn"/>
+                        <outlet property="yorumTextField" destination="p3L-Bx-RAE" id="9Kt-q6-5cK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ChE-1d-LVE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="-542"/>
+            <point key="canvasLocation" x="21.739130434782609" y="-542.41071428571422"/>
         </scene>
         <!--Feed-->
         <scene sceneID="lzl-sJ-GYc">
