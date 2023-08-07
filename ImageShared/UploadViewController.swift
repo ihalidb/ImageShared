@@ -54,7 +54,27 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     imageReferance.downloadURL { url, error in
                         if error == nil {
                             let imageUrl = url?.absoluteString
-                            print(imageUrl)
+                            
+                            if let imageUrl = imageUrl {
+                                
+                                let firestoreDatabase = Firestore.firestore()
+                                let firestorePost = ["gorselurl": imageUrl, "yorum": self.yorumTextField.text!, "email": Auth.auth().currentUser!.email, "tarih": FieldValue.serverTimestamp()] as [String : Any]
+                                
+                                firestoreDatabase.collection("Post").addDocument(data: firestorePost) {
+                                    (error) in
+                                    if error != nil {
+                                        self.hataMesajiGoster(title: "Hata", message: error?.localizedDescription ?? "Hata aldınız, tekrar deneyin!")
+                                    } else {
+                                        self.yorumTextField.text = ""
+                                        self.imageView.image = UIImage(named: "gorselSec")
+                                        self.tabBarController?.selectedIndex = 0
+                                    }
+                                }
+                            }
+                            
+                            
+                            
+                            
                         }
                     }
                 }
