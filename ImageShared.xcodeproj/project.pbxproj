@@ -23,6 +23,7 @@
 		ECFBB13E2A8156C80035D3CD /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBB13D2A8156C80035D3CD /* FeedCell.swift */; };
 		ECFBB1412A8160150035D3CD /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = ECFBB1402A8160150035D3CD /* SDWebImage */; };
 		ECFBB1432A8160150035D3CD /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ECFBB1422A8160150035D3CD /* SDWebImageMapKit */; };
+		ECFBB1452A8165070035D3CD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBB1442A8165070035D3CD /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		EC94897B2A7E8F490064F495 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ECEAD54F2A7EA115000F7970 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECFBB13D2A8156C80035D3CD /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		ECFBB1442A8165070035D3CD /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				EC01985C2A7E7FC50037D7E9 /* Info.plist */,
 				ECEAD54F2A7EA115000F7970 /* GoogleService-Info.plist */,
 				ECFBB13D2A8156C80035D3CD /* FeedCell.swift */,
+				ECFBB1442A8165070035D3CD /* Post.swift */,
 			);
 			path = ImageShared;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				ECFBB13E2A8156C80035D3CD /* FeedCell.swift in Sources */,
 				EC0198532A7E7FC40037D7E9 /* ViewController.swift in Sources */,
 				EC94897A2A7E8F3E0064F495 /* UploadViewController.swift in Sources */,
+				ECFBB1452A8165070035D3CD /* Post.swift in Sources */,
 				EC01984F2A7E7FC40037D7E9 /* AppDelegate.swift in Sources */,
 				EC9489782A7E8F2E0064F495 /* FeedViewController.swift in Sources */,
 				EC0198512A7E7FC40037D7E9 /* SceneDelegate.swift in Sources */,
